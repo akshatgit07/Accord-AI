@@ -13,6 +13,13 @@ def score_event(event: Event) -> Event:
     if event.narrative in {"regional escalation", "sanctions pressure"}:
         score += 0.15
 
+    if event.event_type == "ceasefire_violation":
+        score += 0.30
+    elif event.event_type == "propaganda_alert":
+        score += 0.22
+    elif event.event_type == "sanctions_signal":
+        score += 0.15
+
     event.score = round(min(score, 0.99), 2)
 
     if event.score >= 0.75:

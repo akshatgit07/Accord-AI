@@ -1,0 +1,14 @@
+{
+  "name": "accord-ai-firecrawl-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape:summary": "node scripts/firecrawl_openai_scrape.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "firecrawl": "^4.3.0",
+    "openai": "^5.0.0"
+  }
+}
